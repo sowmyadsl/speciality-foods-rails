@@ -19,11 +19,10 @@
   <% end %>
 </ul>
 <% else %>
-<p>There are no reviews yet!</p>
+<p>This product has 0 reviews, <%= link_to "Add one now!", new_product_review_path(@product) %></p>
 <% end %>
 
 
-<p><%= link_to "Add a Review", new_product_review_path(@product) %></p>
 <p><%= link_to "Return to products", products_path %></p>
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete", product_path(@product),
