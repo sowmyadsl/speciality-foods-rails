@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @products = Product.all
@@ -8,14 +6,15 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
   end
-
+  
   def new
-    @product = current_user.products.build
+    @product = Product.new
   end
 
   def create
-    @product = current_user.products.new(product_params)
+    @product = Product.new(product_params)
     if @product.save
       flash[:notice] = "Product successfully added!"
       redirect_to products_path

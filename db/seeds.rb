@@ -11,7 +11,7 @@ Product.destroy_all
 50.times do |index|
   new_product = Product.create!(name: Faker::Food.ingredient,
                         cost: Faker::Commerce.price,
-                        image: "https://www.olivesdirect.co.uk/media/catalog/product/cache/1/small_image/400x/9df78eab33525d08d6e5fb8d27136e95/p/o/po06.jpg,",
+                        image: "https://i0.wp.com/www.tasteofsicily.co.uk/wp-content/uploads/2014/11/olive-regina.jpg?resize=350%2C300",
                         country_of_origin: Faker::Address.country)
   5.times do
     new_product.reviews.create!(author: Faker::Friends.character, content_body: Faker::Lorem.characters(100), rating: Faker::Number.between(1, 5))
