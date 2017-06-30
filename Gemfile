@@ -32,6 +32,7 @@ gem 'shoulda-matchers'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.3'
 gem 'faker'
+gem 'capybara'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
