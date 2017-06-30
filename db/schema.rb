@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170630154207) do
     t.string "name"
     t.integer "cost"
     t.string "country_of_origin"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
