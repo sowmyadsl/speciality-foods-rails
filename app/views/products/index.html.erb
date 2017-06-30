@@ -2,6 +2,10 @@
 
 <ul>
   <% @products.each do |product| %>
-    <li><%= link_to image_tag product.image,product_path(product) %></li>
+    <li><%= link_to image_tag(product.image), product_path(product) %></li>
   <% end %>
 </ul>
+
+<hr>
+
+<%= link_to "New Product", new_product_path %>
