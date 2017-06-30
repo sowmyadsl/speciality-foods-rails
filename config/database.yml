@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: speciality_foods_development
+
+test:
+  <<: *default
+  database: speciality_foods_test
+
+
+production:
+  <<: *default
+  database: speciality_foods_production
+  username: speciality_foods
+  password: <%= ENV['SPECIALITY_FOODS_DATABASE_PASSWORD'] %>
