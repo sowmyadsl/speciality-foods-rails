@@ -31,6 +31,7 @@ gem 'pry'
 gem 'shoulda-matchers'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.3'
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -38,6 +39,7 @@ gem 'devise', '~> 4.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

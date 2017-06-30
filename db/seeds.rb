@@ -9,11 +9,12 @@
 Product.destroy_all
 
 50.times do |index|
-  new_product = Product.create!(name: Faker::Superhero.unique.power,
-                        price: Faker::Commerce.price,
-                        country: Faker::Address.country)
+  new_product = Product.create!(name: Faker::Commerce.product_name,
+                        cost: Faker::Commerce.price,
+                        image: "http://media.mercola.com/assets/images/foodfacts/olives-nutrition-facts.jpg",
+                        country_of_origin: Faker::Address.country)
   5.times do
-    new_product.reviews.create!(author: Faker::Superhero.name, content: Faker::Lorem.characters(100), rating: Faker::Number.between(1, 5))
+    new_product.reviews.create!(author: Faker::Friends.character, content_body: Faker::Lorem.characters(100), rating: Faker::Number.between(1, 5))
   end
 end
 
