@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
-  
+
   def new
     @product = Product.new
   end
@@ -24,12 +24,13 @@ class ProductsController < ApplicationController
   end
 
   def edit
-
+    @product= Product.find(params[:id])
   end
 
   def update
+    @product= Product.find(params[:id])
     if @product.update(product_params)
-      flash[:notice] = "Post successfully updated!"
+      flash[:notice] = "Product successfully updated!"
       redirect_to products_path
     else
       render :edit
@@ -37,17 +38,13 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+   @product = Product.find(params[:id])
    @product.destroy
-   flash[:notice] = "Post successfully removed!"
+   flash[:notice] = "Product successfully removed!"
    redirect_to products_path
   end
 
   private
-  # callbacks
- def set_product
-   @product = Product.find(params[:id])
- end
-
   def product_params
     params.require(:product).permit(:name, :cost, :image, :country_of_origin)
   end
