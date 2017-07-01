@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>SpecialityFoods</title>
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,7 +16,7 @@
         <div id="logo" class="navbar-brand"><%= link_to "Mario's Speciality foods", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li><%= link_to 'Add Products', new_product_path %></li>
+							<li id ="product"><%= link_to 'Add Products', new_product_path %></li>
         </nav>
       </div>
     </div>

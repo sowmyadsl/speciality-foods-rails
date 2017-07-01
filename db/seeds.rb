@@ -13,6 +13,7 @@ Product.destroy_all
                         cost: Faker::Commerce.price,
                         image: "https://i0.wp.com/www.tasteofsicily.co.uk/wp-content/uploads/2014/11/olive-regina.jpg?resize=350%2C300",
                         country_of_origin: Faker::Address.country)
+
   5.times do
     new_product.reviews.create!(author: Faker::Friends.character, content_body: Faker::Lorem.characters(100), rating: Faker::Number.between(1, 5))
   end

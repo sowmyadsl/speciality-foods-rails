@@ -1,9 +1,18 @@
-<h1>Products</h1>
+<div class="about">
+  <p>Olives have been with Mario from the very beginning. J. Barolo Mario started Mario Olives in 1937. Meanwhile, four generations of the Camacho family have grown and processed olives in the sunny groves of Andalusia, Spain since 1897. These two entities came together in 2008 to form Mario's corporate parent, Mario Camacho Foods. Today, we're headquartered in Plant City, Florida.
 
-<%= link_to "Alphabetically",{:controller => 'products', :action => 'index', :filter => "alphabetical"}%> |
-<%= link_to "Products by Most Reviews",{:controller => 'products', :action => 'index', :filter => "most_reviews"}%> |
-<%= link_to "3 Most Recently added",{:controller => 'products', :action => 'index', :filter => "three_most_recent"}%> |
-<%= link_to "Made in USA",{:controller => 'products', :action => 'index', :filter => "country"}%>
+  When you've been close to olives for such a long time, you learn some things along the way. So perhaps, it's not surprising that we've become known as a leader in new product and packaging innovation, environmental sustainability, social responsibility, and making continuous improvements to provide the absolute highest quality in products and service.</p>
+</div>
+
+
+<h1>Products</h1>
+<div class="sort-by">
+  <p>Sort by:</p>
+  <%= link_to "Alphabetically",{:controller => 'products', :action => 'index', :filter => "alphabetical"}%> |
+  <%= link_to "Products by Most Reviews",{:controller => 'products', :action => 'index', :filter => "most_reviews"}%> |
+  <%= link_to "3 Most Recently added",{:controller => 'products', :action => 'index', :filter => "three_most_recent"}%> |
+  <%= link_to "Made in USA",{:controller => 'products', :action => 'index', :filter => "country"}%>
+</div>
 
 
 <div class="flex-box">

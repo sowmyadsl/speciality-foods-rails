@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :reviews
+  validates :name, :cost, :country_of_origin, :image, :presence => true
 
   scope :alphabetical, -> {( order(name: :asc))}
 
@@ -12,7 +13,6 @@ class Product < ActiveRecord::Base
 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
 
-  scope :country, -> { where(:country_of_origin "United States of America") }
+  scope :country, -> { where(country_of_origin: "United States of America") }
 
-  validates :name, :cost, :country_of_origin, :image, :presence => true
 end
