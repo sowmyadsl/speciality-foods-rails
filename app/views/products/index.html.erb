@@ -1,5 +1,11 @@
 <h1>Products</h1>
 
+<%= link_to "Alphabetically",{:controller => 'products', :action => 'index', :filter => "alphabetical"}%> |
+<%= link_to "Products by Most Reviews",{:controller => 'products', :action => 'index', :filter => "most_reviews"}%> |
+<%= link_to "3 Most Recently added",{:controller => 'products', :action => 'index', :filter => "three_most_recent"}%> |
+<%= link_to "Made in USA",{:controller => 'products', :action => 'index', :filter => "country_of_origin"}%>
+
+
 <div class="flex-box">
      <% @products.each do |product| %>
      <div class="product-img">

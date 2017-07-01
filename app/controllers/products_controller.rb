@@ -1,8 +1,15 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
-    render :index
+    if params[:filter] == nil
+      @products = Product.alphabetical
+    else
+      @products = Product.send(params[:filter])
+      if Product.send(params[:filter]) == []
+        flash[:notice] = "No results returned.  Choose another filter!"
+      end
+
+    end
   end
 
   def show
