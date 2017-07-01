@@ -2,7 +2,8 @@
 
 ## A Web application to manage products and reviews for each product at Mario's Speciality foods.
 
-Landing page:
+##Landing page:
+
 ![screenshot](https://github.com/sowmyadsl/speciality-foods-rails/blob/master/app/assets/images/screenshot.png)
 
 It handles the following user stories:
