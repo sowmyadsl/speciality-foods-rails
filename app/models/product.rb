@@ -12,7 +12,7 @@ class Product < ActiveRecord::Base
 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
 
-  scope :country, -> { where(country_of_origin: "USA") }
+  scope :country, -> { where(:country_of_origin "United States of America") }
 
   validates :name, :cost, :country_of_origin, :image, :presence => true
 end
